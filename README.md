@@ -55,3 +55,31 @@ O sistema foi planejado para conter 4 entidades principais interligadas em banco
    ```bash
    git clone <URL_DO_SEU_REPOSITORIO>
    cd educamais
+Configure as credenciais do seu banco de dados no arquivo src/main/resources/application.properties:
+
+Properties
+spring.datasource.url=jdbc:mysql://localhost:3306/educamais?useSSL=false&serverTimezone=UTC
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+Execute a aplicação usando o Maven Wrapper:
+
+No Linux/Mac:
+
+Bash
+./mvnw spring-boot:run
+No Windows (PowerShell / CMD):
+
+DOS
+mvnw.cmd spring-boot:run
+A API estará rodando em: http://localhost:8080
+
+📖 Documentação da API (Swagger - Sprint 3)
+A documentação interativa da API foi gerada automaticamente utilizando o SpringDoc OpenAPI[cite: 7].
+
+Após iniciar a aplicação, você pode testar todas as rotas e endpoints diretamente pelo navegador acessando:
+🔗 http://localhost:8080/swagger-ui/index.html
+
+👥 Autor
+Desenvolvido para o programa Reconecta.
