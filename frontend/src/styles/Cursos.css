@@ -1,0 +1,52 @@
+.cursos-pagina .campo-disciplinas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cursos-pagina .rotulo-disciplinas {
+    font-weight: 600;
+    color: #243247;
+}
+
+.cursos-pagina .lista-disciplinas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cursos-pagina .disciplina-opcao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.cursos-pagina .disciplina-opcao input {
+    width: auto;
+    margin: 0;
+    accent-color: #2563eb;
+}
+
+.cursos-pagina .disciplina-opcao span {
+    color: #243247;
+}
+
+.cursos-pagina .campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    font: inherit;
+    resize: vertical;
+}
+
+.cursos-pagina .aviso-disciplinas {
+    margin: 0;
+    color: #b42318;
+}

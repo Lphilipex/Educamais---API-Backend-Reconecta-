@@ -1,0 +1,107 @@
+/* =========================================
+   ESTILOS GLOBAIS — EDUCAMais
+   ========================================= */
+
+:root {
+    font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #243247;
+    background: #f6f8fc;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+
+    --cor-primaria: #2458b8;
+    --cor-primaria-hover: #1c4798;
+    --cor-fundo: #f6f8fc;
+    --cor-superficie: #ffffff;
+    --cor-texto: #243247;
+    --cor-texto-secundario: #718096;
+    --cor-borda: #e4eaf2;
+    --raio-padrao: 12px;
+    --sombra-card: 0 4px 18px rgba(31, 51, 84, 0.045);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    background: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    color: var(--cor-texto);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9aa6b7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+:focus-visible {
+    outline: 3px solid rgba(57, 117, 232, 0.35);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: #dce8ff;
+    color: #203f78;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

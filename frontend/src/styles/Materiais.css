@@ -1,0 +1,39 @@
+.materiais-pagina .campo select,
+.materiais-pagina .campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #243247;
+    font: inherit;
+}
+
+.materiais-pagina .campo textarea {
+    resize: vertical;
+}
+
+.materiais-pagina .aviso-material {
+    margin: 6px 0 0;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+.materiais-pagina .descricao-material {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.materiais-pagina .link-material {
+    color: #2158a5;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.materiais-pagina .link-material:hover {
+    text-decoration: underline;
+}

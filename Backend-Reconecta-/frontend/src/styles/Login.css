@@ -1,0 +1,413 @@
+
+/* =====================================
+   TELA DE LOGIN — EDUCAMais
+   ===================================== */
+
+.login-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+/* Área de apresentação */
+
+.login-apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 36px clamp(28px, 5vw, 64px);
+    color: #ffffff;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(91, 177, 139, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(145deg, #125541, #176b55 60%, #104b3d);
+}
+
+/* Marca */
+
+.login-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.login-marca-icone {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.13);
+    color: #ffffff;
+    font-size: 23px;
+}
+
+/* Texto de apresentação */
+
+.login-texto {
+    width: 100%;
+    max-width: 500px;
+    margin: auto 0;
+}
+
+.login-sobretitulo {
+    color: #bdebd5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.login-texto h1 {
+    margin: 18px 0;
+    color: #ffffff;
+    font-size: clamp(30px, 3.2vw, 46px);
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+.login-texto > p {
+    max-width: 420px;
+    margin: 0;
+    color: #d9eee5;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Informações ODS 4 */
+
+.login-ods {
+    max-width: 450px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    box-sizing: border-box;
+}
+
+.login-ods span {
+    display: inline-block;
+    margin-bottom: 7px;
+    color: #d5f4a5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.login-ods p {
+    margin: 0;
+    color: #e0f0e8;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Área do formulário */
+
+.login-area-formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 32px clamp(24px, 4vw, 56px) 18px;
+    background: #ffffff;
+}
+
+/* Formulário */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Cabeçalho do formulário */
+
+.login-form-cabecalho {
+    margin-bottom: 4px;
+}
+
+.login-bem-vindo {
+    color: #268266;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.login-form-cabecalho h2 {
+    margin: 10px 0 8px;
+    color: #203149;
+    font-size: 27px;
+    line-height: 1.25;
+    letter-spacing: -0.6px;
+}
+
+.login-form-cabecalho p {
+    margin: 0;
+    color: #778599;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Campos */
+
+.login-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.login-campo label {
+    color: #39495e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.login-campo input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #dce4ed;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    color: #243247;
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-campo input::placeholder {
+    color: #a0aaba;
+}
+
+.login-campo input:hover:not(:disabled) {
+    border-color: #b9c9d8;
+}
+
+.login-campo input:focus {
+    border-color: #268266;
+    box-shadow: 0 0 0 3px rgba(38, 130, 102, 0.12);
+}
+
+.login-campo input:disabled {
+    background: #f4f7fb;
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+/* Mensagens de erro */
+
+.login-erro {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid #f4cccc;
+    border-radius: 7px;
+    background: #fff0f0;
+    color: #a32020;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Botão de entrar */
+
+.login-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 44px;
+    margin-top: 2px;
+    padding: 10px 16px;
+    border: 1px solid #176b55;
+    border-radius: 7px;
+    background: #176b55;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.login-botao:hover:not(:disabled) {
+    border-color: #125541;
+    background: #125541;
+}
+
+.login-botao:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+/* Cadastro */
+
+.login-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 14px;
+    border-top: 1px solid #edf1f5;
+    text-align: center;
+}
+
+.login-cadastro p {
+    margin: 0;
+    color: #778599;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.login-cadastro-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 7px 12px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    background: transparent;
+    color: #176b55;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.login-cadastro-botao:hover {
+    border-color: #d9ebe2;
+    background: #f0f8f4;
+}
+
+.login-cadastro-botao:focus-visible,
+.login-botao:focus-visible {
+    outline: 3px solid rgba(38, 130, 102, 0.3);
+    outline-offset: 3px;
+}
+
+/* Rodapé */
+
+.login-rodape {
+    color: #8995a5;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Tablets */
+
+@media (max-width: 900px) and (min-width: 601px) {
+    .login-container {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    }
+
+    .login-apresentacao {
+        padding: 28px 24px;
+        gap: 24px;
+    }
+
+    .login-texto h1 {
+        font-size: 32px;
+    }
+
+    .login-texto > p {
+        font-size: 13px;
+    }
+
+    .login-ods {
+        padding: 13px;
+    }
+
+    .login-area-formulario {
+        padding: 24px 20px;
+    }
+
+    .login-form {
+        max-width: 320px;
+        gap: 15px;
+    }
+
+    .login-form-cabecalho h2 {
+        font-size: 25px;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+    .login-container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .login-apresentacao {
+        min-height: auto;
+        padding: 24px 20px;
+        gap: 24px;
+    }
+
+    .login-texto {
+        margin: 8px 0;
+    }
+
+    .login-texto h1 {
+        margin: 14px 0;
+        font-size: 29px;
+    }
+
+    .login-texto > p {
+        font-size: 14px;
+    }
+
+    .login-ods {
+        padding: 13px;
+    }
+
+    .login-area-formulario {
+        min-height: auto;
+        padding: 32px 20px 24px;
+        gap: 24px;
+    }
+
+    .login-form {
+        max-width: 380px;
+        gap: 17px;
+    }
+
+    .login-form-cabecalho h2 {
+        font-size: 26px;
+    }
+}

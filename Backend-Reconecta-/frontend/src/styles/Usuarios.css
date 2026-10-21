@@ -1,0 +1,501 @@
+/* =========================================
+   PÁGINA DE USUÁRIOS — EDUCAMais
+   ========================================= */
+
+.pagina-usuarios {
+    width: 100%;
+    max-width: 1500px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.pagina-usuarios .pagina-cabecalho {
+    margin-bottom: 30px;
+}
+
+.pagina-usuarios .pagina-cabecalho h2 {
+    margin: 10px 0;
+    color: #203149;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.pagina-usuarios .pagina-cabecalho p {
+    line-height: 1.6;
+}
+
+.pagina-usuarios .pagina-cabecalho .botao-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.pagina-usuarios .pagina-cabecalho .botao-secundario:hover:not(:disabled) {
+    border-color: #b8d9cd;
+    background: #f0f8f4;
+    color: #176b55;
+}
+
+.pagina-usuarios button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/* =========================================
+   MENSAGENS DE RETORNO
+   ========================================= */
+
+.pagina-usuarios .mensagem-erro,
+.pagina-usuarios .mensagem-sucesso {
+    margin-bottom: 20px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.pagina-usuarios .mensagem-erro {
+    border: 1px solid #f2caca;
+    background: #fff5f5;
+    color: #a52828;
+}
+
+.pagina-usuarios .mensagem-erro strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.pagina-usuarios .mensagem-erro p {
+    margin: 0;
+}
+
+.pagina-usuarios .mensagem-sucesso {
+    border: 1px solid #c5e7d2;
+    background: #effaf3;
+    color: #176b45;
+}
+
+/* =========================================
+   CAMPO DE PESQUISA
+   ========================================= */
+
+.pagina-usuarios .filtro-usuarios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 20px;
+    border: 1px solid #e5ebf2;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.pagina-usuarios .filtro-usuarios label {
+    color: #34445a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pagina-usuarios .filtro-usuarios input {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 11px 14px;
+    border: 1px solid #dce4ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #34445a;
+    font: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pagina-usuarios .filtro-usuarios input:focus {
+    border-color: #268266;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 130, 102, 0.12);
+}
+
+/* =========================================
+   FORMULÁRIO DE CADASTRO E EDIÇÃO
+   ========================================= */
+
+.pagina-usuarios .formulario-card {
+    margin-bottom: 22px;
+    border: 1px solid #e5ebf2;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(36, 50, 71, 0.035);
+    overflow: hidden;
+}
+
+.pagina-usuarios .formulario-card .tabela-cabecalho,
+.pagina-usuarios .tabela-card .tabela-cabecalho {
+    padding: 24px;
+}
+
+.pagina-usuarios .formulario-card .tabela-cabecalho h3,
+.pagina-usuarios .tabela-card .tabela-cabecalho h3 {
+    margin: 0 0 7px;
+    color: #203149;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.pagina-usuarios .formulario-usuario {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 24px;
+    padding: 24px;
+}
+
+.pagina-usuarios .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.pagina-usuarios .campo label {
+    color: #34445a;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.pagina-usuarios .campo input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+    padding: 11px 13px;
+    border: 1px solid #dce4ed;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #34445a;
+    font: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.pagina-usuarios .campo input::placeholder,
+.pagina-usuarios .filtro-usuarios input::placeholder {
+    color: #98a4b3;
+}
+
+.pagina-usuarios .campo input:focus {
+    border-color: #268266;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 130, 102, 0.12);
+}
+
+/* Botões do formulário */
+
+.pagina-usuarios .acoes-formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    grid-column: 1 / -1;
+    padding-top: 2px;
+}
+
+.pagina-usuarios .botao-principal,
+.pagina-usuarios .acoes-formulario .botao-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.pagina-usuarios .botao-principal {
+    border: 1px solid #176b55;
+    background: #176b55;
+    color: #ffffff;
+}
+
+.pagina-usuarios .botao-principal:hover:not(:disabled) {
+    border-color: #125541;
+    background: #125541;
+}
+
+.pagina-usuarios .acoes-formulario .botao-secundario {
+    border: 1px solid #dce4ed;
+    background: #ffffff;
+    color: #34445a;
+}
+
+.pagina-usuarios .acoes-formulario .botao-secundario:hover:not(:disabled) {
+    background: #f6f9fc;
+}
+
+.pagina-usuarios button:focus-visible {
+    outline: 3px solid rgba(38, 130, 102, 0.25);
+    outline-offset: 2px;
+}
+
+/* =========================================
+   RESUMO DO TOTAL DE USUÁRIOS
+   ========================================= */
+
+.pagina-usuarios .resumo-card {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 330px;
+    min-height: 112px;
+    margin-bottom: 24px;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(36, 50, 71, 0.035);
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.pagina-usuarios .resumo-card:hover {
+    border-color: #cfe5dc;
+    transform: translateY(-2px);
+}
+
+.pagina-usuarios .resumo-icone {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #e8f5ef;
+    color: #176b55;
+}
+
+.pagina-usuarios .resumo-card p {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.pagina-usuarios .resumo-card strong {
+    color: #203149;
+    font-size: 29px;
+    letter-spacing: -0.7px;
+}
+
+/* =========================================
+   TABELA DE USUÁRIOS
+   ========================================= */
+
+.pagina-usuarios .tabela-card {
+    min-width: 0;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(36, 50, 71, 0.035);
+}
+
+.pagina-usuarios .tabela-card .tabela-cabecalho p {
+    line-height: 1.6;
+}
+
+.pagina-usuarios .tabela-responsiva {
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pagina-usuarios .tabela-responsiva table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.pagina-usuarios .tabela-responsiva th {
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5ebf2;
+    background: #f7faf9;
+    color: #68788b;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.pagina-usuarios .tabela-responsiva td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #edf1f5;
+    color: #34445a;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.pagina-usuarios .tabela-responsiva tbody tr {
+    transition: background 0.15s;
+}
+
+.pagina-usuarios .tabela-responsiva tbody tr:hover {
+    background: #f5faf7;
+}
+
+.pagina-usuarios .tabela-responsiva tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Ações da tabela */
+
+.pagina-usuarios .acoes-tabela {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagina-usuarios .botao-editar,
+.pagina-usuarios .botao-excluir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 33px;
+    padding: 8px 12px;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.pagina-usuarios .botao-editar {
+    border: 1px solid #cbdcf5;
+    background: #edf4ff;
+    color: #285b9a;
+}
+
+.pagina-usuarios .botao-editar:hover:not(:disabled) {
+    border-color: #b8cff3;
+    background: #dfeaff;
+}
+
+.pagina-usuarios .botao-excluir {
+    border: 1px solid #f4d3d3;
+    background: #fff0f0;
+    color: #b42323;
+}
+
+.pagina-usuarios .botao-excluir:hover:not(:disabled) {
+    border-color: #edbaba;
+    background: #ffe2e2;
+}
+
+/* =========================================
+   CARREGAMENTO E LISTA VAZIA
+   ========================================= */
+
+.pagina-usuarios .estado-vazio {
+    padding: 42px 20px;
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+    .pagina-usuarios .formulario-usuario {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .pagina-usuarios .formulario-card .tabela-cabecalho,
+    .pagina-usuarios .tabela-card .tabela-cabecalho {
+        padding: 20px;
+    }
+
+    .pagina-usuarios .tabela-responsiva th,
+    .pagina-usuarios .tabela-responsiva td {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 760px) {
+    .pagina-usuarios .pagina-cabecalho {
+        gap: 18px;
+    }
+
+    .pagina-usuarios .pagina-cabecalho h2 {
+        font-size: 26px;
+    }
+
+    .pagina-usuarios .pagina-cabecalho .botao-secundario {
+        width: 100%;
+    }
+
+    .pagina-usuarios .resumo-card {
+        max-width: 100%;
+    }
+
+    .pagina-usuarios .filtro-usuarios {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pagina-usuarios .formulario-usuario {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 18px;
+    }
+
+    .pagina-usuarios .formulario-card .tabela-cabecalho,
+    .pagina-usuarios .tabela-card .tabela-cabecalho {
+        padding: 18px;
+    }
+
+    .pagina-usuarios .acoes-formulario {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-usuarios .acoes-formulario button {
+        width: 100%;
+    }
+
+    .pagina-usuarios .formulario-card,
+    .pagina-usuarios .tabela-card,
+    .pagina-usuarios .filtro-usuarios,
+    .pagina-usuarios .resumo-card {
+        border-radius: 10px;
+    }
+
+    .pagina-usuarios .tabela-responsiva table {
+        min-width: 620px;
+    }
+
+    .pagina-usuarios .acoes-tabela {
+        flex-wrap: nowrap;
+    }
+}

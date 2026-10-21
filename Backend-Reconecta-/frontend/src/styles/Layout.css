@@ -1,0 +1,65 @@
+
+/* =========================================
+   CORREÇÃO DE LARGURA DO EDUCAMais
+   ========================================= */
+
+html,
+body,
+#root {
+    width: 100%;
+    min-width: 0;
+}
+
+.aplicacao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.estrutura {
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+}
+
+.menu-lateral {
+    flex: 0 0 245px;
+    width: 245px;
+}
+
+.conteudo {
+    flex: 1 1 0%;
+    width: 0;
+    min-width: 0;
+    max-width: none;
+    padding: 34px;
+}
+
+.conteudo > section,
+.conteudo > main,
+.conteudo > div {
+    width: 100%;
+    max-width: none;
+}
+
+/* Ajuste para telas menores */
+
+@media (max-width: 760px) {
+    .estrutura {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        flex: none;
+        width: 100%;
+    }
+
+    .conteudo {
+        width: 100%;
+        padding: 22px 16px;
+    }
+}

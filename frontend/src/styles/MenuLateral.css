@@ -1,0 +1,203 @@
+
+
+.menu-lateral {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 250px;
+    flex-direction: column;
+    width: 250px;
+    min-width: 250px;
+    align-self: stretch;
+    padding: 28px 16px 20px;
+    background: #ffffff;
+    border-right: 1px solid #e6ebf2;
+}
+
+/* Título do menu */
+
+.menu-titulo {
+    margin: 0 0 18px;
+    padding: 0 12px;
+    color: #8b98ac;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+/* Navegação */
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+/* Botões */
+
+.menu-lateral .menu-item {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    color: #59677c;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.menu-lateral .menu-item:hover {
+    background: #f0f5ff;
+    color: #2458b8;
+}
+
+.menu-lateral .menu-item:active {
+    transform: scale(0.99);
+}
+
+/* Página selecionada */
+
+.menu-lateral .menu-item.ativo {
+    border-color: #dce8ff;
+    background: #eaf1ff;
+    color: #2458b8;
+    font-weight: 750;
+}
+
+.menu-lateral .menu-item.ativo::before {
+    position: absolute;
+    top: 9px;
+    bottom: 9px;
+    left: -1px;
+    width: 3px;
+    border-radius: 0 4px 4px 0;
+    background: #3975e8;
+    content: "";
+}
+
+/* Ícones */
+
+.menu-lateral .menu-item-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    color: inherit;
+    font-size: 19px;
+    line-height: 1;
+}
+
+/* Bloco ODS 4 */
+
+.menu-lateral .menu-ods {
+    margin-top: auto;
+    padding: 17px;
+    border: 1px solid #dce8fb;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #f2f6ff, #f8faff);
+}
+
+.menu-lateral .ods-numero {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #dce8ff;
+    color: #2458b8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.menu-lateral .menu-ods h3 {
+    margin: 12px 0 7px;
+    color: #253c62;
+    font-size: 14px;
+    font-weight: 750;
+    line-height: 1.5;
+}
+
+.menu-lateral .menu-ods p {
+    margin: 0;
+    color: #687991;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Acessibilidade */
+
+.menu-lateral .menu-item:focus-visible {
+    outline: 3px solid rgba(57, 117, 232, 0.35);
+    outline-offset: 2px;
+}
+
+/* Tablets e celulares */
+
+@media (max-width: 760px) {
+    .menu-lateral {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        padding: 14px 12px;
+        border-right: none;
+        border-bottom: 1px solid #e6ebf2;
+    }
+
+    .menu-titulo {
+        margin-bottom: 10px;
+    }
+
+    .menu-lateral nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 7px;
+        overflow-x: auto;
+        padding: 2px 1px 7px;
+        scrollbar-width: thin;
+    }
+
+    .menu-lateral .menu-item {
+        flex: 0 0 auto;
+        width: auto;
+        min-height: 42px;
+        padding: 9px 12px;
+        white-space: nowrap;
+    }
+
+    .menu-lateral .menu-item.ativo::before {
+        top: auto;
+        right: 10px;
+        bottom: -1px;
+        left: 10px;
+        width: auto;
+        height: 3px;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .menu-lateral .menu-ods {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-lateral .menu-item {
+        transition: none;
+    }
+}

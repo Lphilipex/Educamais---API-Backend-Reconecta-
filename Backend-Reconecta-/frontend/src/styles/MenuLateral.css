@@ -1,0 +1,152 @@
+
+/* =========================================
+   MENU LATERAL — EDUCAMais
+   ========================================= */
+
+.menu-lateral {
+    display: flex;
+    flex: 0 0 245px;
+    flex-direction: column;
+    width: 245px;
+    min-width: 245px;
+    align-self: stretch;
+    padding: 30px 18px;
+    background: #ffffff;
+    border-right: 1px solid #e4eaf2;
+}
+
+/* Título do menu */
+
+.menu-titulo {
+    margin-bottom: 16px;
+    padding: 0 12px;
+    color: #8b98a9;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Navegação */
+
+.menu-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+/* Botões */
+
+.menu-lateral .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: #526176;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.menu-lateral .menu-item:hover {
+    background: #f3f7f5;
+    color: #176b55;
+}
+
+.menu-lateral .menu-item.ativo {
+    border-color: #d7eee3;
+    background: #e8f5ef;
+    color: #176b55;
+    font-weight: 700;
+}
+
+/* Ícones */
+
+.menu-lateral .menu-item-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 22px;
+    width: 22px;
+    height: 22px;
+    color: inherit;
+    font-size: 20px;
+    line-height: 1;
+}
+
+/* Bloco ODS 4 */
+
+.menu-lateral .menu-ods {
+    margin-top: auto;
+    padding: 18px;
+    border: 1px solid #e0edda;
+    border-radius: 12px;
+    background: #f0f7ed;
+}
+
+.menu-lateral .ods-numero {
+    display: inline-block;
+    color: #397b3e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.menu-lateral .menu-ods h3 {
+    margin: 10px 0;
+    color: #315b37;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.menu-lateral .menu-ods p {
+    margin: 0;
+    color: #627963;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* Acessibilidade */
+
+.menu-lateral .menu-item:focus-visible {
+    outline: 3px solid rgba(38, 130, 102, 0.3);
+    outline-offset: 2px;
+}
+
+/* Telas menores */
+
+@media (max-width: 760px) {
+    .menu-lateral {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid #e4eaf2;
+    }
+
+    .menu-lateral .menu-ods {
+        display: none;
+    }
+
+    .menu-lateral nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu-lateral .menu-item {
+        width: auto;
+        flex: 1 1 auto;
+    }
+}

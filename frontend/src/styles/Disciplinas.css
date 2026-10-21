@@ -1,0 +1,25 @@
+.disciplinas-pagina .campo select,
+.disciplinas-pagina .campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #d8e0e9;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #243247;
+    font: inherit;
+}
+
+.disciplinas-pagina .campo textarea {
+    resize: vertical;
+}
+
+.disciplinas-pagina .aviso-disciplina {
+    margin: 6px 0 0;
+    color: #b42318;
+    font-size: 0.9rem;
+}
+
+.disciplinas-pagina td {
+    overflow-wrap: anywhere;
+}

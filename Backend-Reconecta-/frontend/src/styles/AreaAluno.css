@@ -1,0 +1,124 @@
+/* =========================================
+   ÁREA DO ALUNO — EDUCAMais
+   ========================================= */
+
+/* Organização dos dados cadastrais */
+
+.pagina-usuarios .dados-aluno {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 24px;
+}
+
+/* Cada informação do aluno */
+
+.pagina-usuarios .campo-dado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    min-height: 88px;
+    padding: 16px 18px;
+    background: #f8fafc;
+    border: 1px solid #e5ebf2;
+    border-radius: 10px;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.pagina-usuarios .campo-dado:hover {
+    background: #f2f8f5;
+    border-color: #c9e2d6;
+}
+
+/* Nome do campo: E-mail, Matrícula etc. */
+
+.pagina-usuarios .campo-dado span {
+    display: block;
+    color: #718096;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+/* Valor da informação */
+
+.pagina-usuarios .campo-dado strong {
+    display: block;
+    color: #243247;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Botão de atualizar dados */
+
+.pagina-usuarios .dados-aluno + .tabela-acoes {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 24px 24px;
+}
+
+.pagina-usuarios .dados-aluno + .tabela-acoes .botao-secundario {
+    min-height: 42px;
+    padding: 11px 18px;
+    border-color: #d5e4dc;
+    color: #176b55;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.pagina-usuarios .dados-aluno + .tabela-acoes .botao-secundario:hover {
+    background: #e8f5ef;
+    border-color: #a9d2bd;
+}
+
+/* Ajustes para telas médias */
+
+@media (max-width: 900px) {
+    .pagina-usuarios .dados-aluno {
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .pagina-usuarios .campo-dado {
+        padding: 14px 16px;
+    }
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .pagina-usuarios .dados-aluno {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .pagina-usuarios .campo-dado {
+        min-height: auto;
+        padding: 14px 16px;
+    }
+
+    .pagina-usuarios .campo-dado strong {
+        font-size: 14px;
+    }
+
+    .pagina-usuarios .dados-aluno + .tabela-acoes {
+        padding: 0 16px 18px;
+    }
+
+    .pagina-usuarios .dados-aluno + .tabela-acoes .botao-secundario {
+        width: 100%;
+    }
+}

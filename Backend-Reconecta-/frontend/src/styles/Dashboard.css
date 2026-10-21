@@ -1,0 +1,433 @@
+
+/* =========================================
+   DASHBOARD — EDUCAMais
+   ========================================= */
+
+.pagina-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Botão de atualização */
+
+.pagina-dashboard .pagina-cabecalho > button {
+    flex-shrink: 0;
+    min-height: 42px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.pagina-dashboard .pagina-cabecalho > button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+/* Mensagem de erro */
+
+.pagina-dashboard .mensagem-erro {
+    padding: 18px 20px;
+    border: 1px solid #f2caca;
+    border-radius: 12px;
+    background: #fff5f5;
+    color: #a52828;
+}
+
+.pagina-dashboard .mensagem-erro strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.pagina-dashboard .mensagem-erro p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   INDICADORES
+   ========================================= */
+
+.dashboard-indicadores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.dashboard-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    min-height: 145px;
+    padding: 22px;
+    border: 1px solid #e5ebf2;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(36, 50, 71, 0.04);
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+    border-color: #d5e7dd;
+    box-shadow: 0 6px 20px rgba(36, 50, 71, 0.07);
+    transform: translateY(-2px);
+}
+
+/* Ícone do indicador */
+
+.dashboard-card-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #e8f5ef;
+    color: #176b55;
+    font-size: 23px;
+}
+
+/* Conteúdo do indicador */
+
+.dashboard-card-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    min-width: 0;
+    flex: 1;
+}
+
+.dashboard-card-conteudo > span {
+    color: #718096;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.dashboard-card-conteudo > strong {
+    color: #203149;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-card-conteudo > small {
+    color: #8995a6;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Cartões informativos */
+
+.dashboard-card-informativo .dashboard-card-icone {
+    background: #f0f4f8;
+    color: #52647a;
+}
+
+.dashboard-card-informativo .dashboard-card-conteudo > strong {
+    font-size: 21px;
+}
+
+/* =========================================
+   ACESSO RÁPIDO
+   ========================================= */
+
+.dashboard-secao {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #e5ebf2;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(36, 50, 71, 0.04);
+}
+
+.dashboard-secao-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.dashboard-secao-cabecalho h3 {
+    margin: 0;
+    color: #203149;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-secao-cabecalho p {
+    margin: 6px 0 0;
+    color: #8995a6;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* Grade dos atalhos */
+
+.dashboard-atalhos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+/* Cada atalho */
+
+.dashboard-atalho {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    min-width: 0;
+    min-height: 88px;
+    padding: 17px;
+    border: 1px solid #e5ebf2;
+    border-radius: 11px;
+    background: #ffffff;
+    color: #34445a;
+    text-align: left;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.dashboard-atalho:hover {
+    background: #f5faf7;
+    border-color: #bcdcca;
+    transform: translateY(-2px);
+}
+
+.dashboard-atalho:focus-visible {
+    outline: 2px solid #268266;
+    outline-offset: 3px;
+}
+
+/* Ícone dos atalhos */
+
+.dashboard-atalho-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #e8f5ef;
+    color: #176b55;
+    font-size: 21px;
+}
+
+/* Texto dos atalhos */
+
+.dashboard-atalho > span:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-atalho strong {
+    color: #203149;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.dashboard-atalho small {
+    color: #8995a6;
+    font-size: 11px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Seta do atalho */
+
+.dashboard-seta {
+    flex-shrink: 0;
+    color: #268266;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.dashboard-atalho:hover .dashboard-seta {
+    transform: translateX(3px);
+}
+
+/* =========================================
+   BLOCO ODS 4
+   ========================================= */
+
+.dashboard-ods {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #d8e8d5;
+    border-radius: 14px;
+    background: #f0f7ed;
+}
+
+.dashboard-ods-selo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    min-height: 76px;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: #397b3e;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.dashboard-ods h3 {
+    margin: 0 0 8px;
+    color: #315b37;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.dashboard-ods p {
+    margin: 0;
+    color: #627963;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 1100px) {
+    .dashboard-indicadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dashboard-card:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 760px) {
+    .pagina-dashboard {
+        gap: 20px;
+    }
+
+    .pagina-dashboard .pagina-cabecalho > button {
+        width: 100%;
+    }
+
+    .dashboard-indicadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dashboard-card {
+        flex-direction: column;
+        gap: 13px;
+        min-height: 150px;
+        padding: 17px;
+    }
+
+    .dashboard-card:first-child {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        min-height: auto;
+    }
+
+    .dashboard-card-conteudo > strong {
+        font-size: 22px;
+    }
+
+    .dashboard-card-informativo .dashboard-card-conteudo > strong {
+        font-size: 18px;
+    }
+
+    .dashboard-secao {
+        padding: 18px;
+    }
+
+    .dashboard-atalhos {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .dashboard-atalho {
+        min-height: 78px;
+        padding: 14px;
+    }
+
+    .dashboard-ods {
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px;
+    }
+
+    .dashboard-ods-selo {
+        width: 60px;
+        min-height: 60px;
+        font-size: 14px;
+    }
+
+    .dashboard-ods h3 {
+        font-size: 15px;
+    }
+
+    .dashboard-ods p {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   CELULARES PEQUENOS
+   ========================================= */
+
+@media (max-width: 420px) {
+    .dashboard-indicadores {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .dashboard-card,
+    .dashboard-card:first-child {
+        grid-column: auto;
+        flex-direction: row;
+        align-items: center;
+        min-height: auto;
+        padding: 17px;
+    }
+
+    .dashboard-card-conteudo > strong {
+        font-size: 22px;
+    }
+
+    .dashboard-ods {
+        flex-direction: column;
+    }
+
+    .dashboard-ods-selo {
+        width: 64px;
+        min-height: 48px;
+    }
+}
